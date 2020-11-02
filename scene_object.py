@@ -47,6 +47,8 @@ class Camera():
 class ObjObject():
     def __init__(self, obj: Shape):
         self.shape = obj
+        self.respondable = Shape(obj.get_name() + "_respondable")
+        self.visible = obj
         self.name = self.shape.get_name()
         try:
             self.frame = Dummy(self.name + "_frame")
